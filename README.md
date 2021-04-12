@@ -1,3 +1,3 @@
-# TypeORM Boilerplate
+# Prisma 2 Boilerplate
 
-Uses MySQL but that can be easily changed in `ormconfig.json`, for more dialects check TypeORM documentation.
+Uses PostgreSQL but that can be changed in the `.env.example`.
