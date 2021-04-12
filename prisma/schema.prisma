@@ -1,0 +1,18 @@
+// Schema documentation: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id Int @default(autoincrement()) @id
+  email String @unique
+  firstName String?
+  lastName String?
+  age Int?
+}
