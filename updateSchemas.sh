@@ -8,9 +8,9 @@ prismaDir='example'
 if [ -d $prismaDir/schemas ]; then
   if [ ! -f $prismaDir/schema.prisma ]; then
     touch $prismaDir/schema.prisma
-    cat $prismaDir/base.prisma >> example/schema.prisma
+    cat $prismaDir/base.prisma >> $prismaDir/schema.prisma
 
-    for schema in $(ls example/schemas); do
+    for schema in $(ls $prismaDir/schemas); do
       cat $prismaDir/schemas/$schema >> $prismaDir/schema.prisma
     done
   else
