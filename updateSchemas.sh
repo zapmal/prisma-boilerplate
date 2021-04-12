@@ -1,14 +1,22 @@
-# If there's no schema.prisma file, this copies all
-# content from prisma/schemas and pastes it in there.
-# Ideally, each schema in prisma/schemas should have spaces in both
-# start and end.
+# If there's a prisma/schema.prisma, it deletes it and creates a new one.
+# After that, it iterates through prisma/schemas (you should create this folder
+# and add your schemas in there) and pastes the content of each schema into
+# prisma/schema.prisma.
 
-prismaDir='example'
+# It doesn't matter if the file has spaces in both start and beginning, it's
+# purely aesthethic.
+# You can have a "base" file containing generators, datasources and extra things
+# use case specific.
+
+prismaDir='prisma'
 
 if [ -d $prismaDir/schemas ]; then
   if [ ! -f $prismaDir/schema.prisma ]; then
     touch $prismaDir/schema.prisma
-    cat $prismaDir/base.prisma >> $prismaDir/schema.prisma
+
+    if [ -f $prismaDir/base.prisma ]; then
+      cat $prismaDir/base.prisma >> $prismaDir/schema.prisma
+    fi
 
     for schema in $(ls $prismaDir/schemas); do
       cat $prismaDir/schemas/$schema >> $prismaDir/schema.prisma
