@@ -7,8 +7,6 @@
       "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
       "watch": "tsc -w",
       "build": "tsc",
-      "migrate": "npx typeorm migration:run",
-      "undo:migrations": "npx typeorm migration:revert",
       "start": "ts-node src/server.ts"
    },
    "devDependencies": {
