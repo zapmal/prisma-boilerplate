@@ -4,9 +4,8 @@
 # prisma/schema.prisma.
 
 # It doesn't matter if the file has spaces in both start and beginning, it's
-# purely aesthethic.
-# You can have a "base" file containing generators, datasources and extra things
-# use case specific.
+# purely aesthethic. You can have a "base" file containing generators, datasources, and extra 
+# use-case specific things.
 
 prismaDir='prisma'
 
