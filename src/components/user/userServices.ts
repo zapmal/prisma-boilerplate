@@ -8,7 +8,7 @@ const getSingleUser = async (userID: number) => {
   const user = await client.user.findUnique({ where: { id: userID } });
 
   return user;
-}; 
+};
 
 const getAllUsers = async () => {
   const users = await client.user.findMany();
@@ -22,8 +22,8 @@ const createUser = async (_user: User) => {
       email: _user.email,
       firstName: _user.firstName,
       lastName: _user.lastName,
-      age: _user.age
-    }
+      age: _user.age,
+    },
   });
 
   return user;

@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { 
+import {
   getSingleUser,
   getAllUsers,
   createUser,
@@ -40,7 +40,7 @@ const deleteUser = async (userID: number, response: Response) => {
 
   if (!userExists) {
     response.status(404);
-    return { message: 'User not found.'};
+    return { message: 'User not found.' };
   }
 
   await deleteSingleUser(userID);
@@ -48,9 +48,9 @@ const deleteUser = async (userID: number, response: Response) => {
   return { message: 'User deleted.' };
 };
 
-export { 
+export {
   getUser,
   getUsers,
-  postUser, 
-  deleteUser
+  postUser,
+  deleteUser,
 };

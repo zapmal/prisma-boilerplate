@@ -1,10 +1,10 @@
 import { Router } from 'express';
 
-import { 
-  getUser, 
-  getUsers, 
-  postUser, 
-  deleteUser, 
+import {
+  getUser,
+  getUsers,
+  postUser,
+  deleteUser,
 } from './userController';
 import handler from '@utils/handler';
 
