@@ -4,7 +4,7 @@ import {
   getAllUsers,
   createUser,
   deleteSingleUser,
-} from './userService';
+} from './userServices';
 import { User } from './userTypes';
 
 const getUser = async (userID: number, response: Response) => {
